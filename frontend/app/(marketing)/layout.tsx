@@ -1,8 +1,14 @@
+// import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
-import "./globals.css";
+import Footer from "../common/Footer";
+import Header from "../common/Header";
+import SideBar from "../common/SideBar";
+import TopNav from "../common/TopBar";
+import "../globals.css";
 
-const inter = Rubik({ subsets: ["latin"], variable: "--font-sans" });
+const rubik = Rubik({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn("min-h-screen font-sans antialiased", rubik.variable)}
+      >
+        <Header />
+        <TopNav />
+        <SideBar />
+        <main className="lg:container lg:mx-auto"></main>
+        <Footer />
+      </body>
     </html>
   );
 }
