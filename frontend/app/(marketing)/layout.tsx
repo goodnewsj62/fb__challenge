@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
+import CenterLgScreen from "../common/CenterLgScreen";
 import Footer from "../common/Footer";
 import Header from "../common/Header";
 import SideBar from "../common/SideBar";
@@ -28,7 +29,9 @@ export default function RootLayout({
         <Header />
         <TopNav />
         <SideBar />
-        <main className="lg:container lg:mx-auto"></main>
+        <main className="lg:container lg:mx-auto">
+          <CenterLgScreen>{children}</CenterLgScreen>
+        </main>
         <Footer />
       </body>
     </html>
