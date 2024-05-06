@@ -9,9 +9,9 @@
     --theme-black: #1a1423;
     --theme-yellow: #f8f246ff;
     --theme-shadeblu: #e1f1f2ff;
-    --theme-blue: #2cbbc3ff;
-    --theme-brown: #8c5826ff;
+    --theme-pink: #ffbbc6;
     --theme-orange: #ff9934ff;
+    --fade-text: #6c757d;
     /*  */
 
     --background: 0 0% 100%;
@@ -26,7 +26,7 @@
     --primary: var(--theme-black);
     --primary-foreground: #fffcfc;
 
-    --secondary: var(--theme-blue);
+    --secondary: var(--theme-pink);
     --secondary-foreground: var(--theme-black);
 
     --muted: 210 40% 96.1%;

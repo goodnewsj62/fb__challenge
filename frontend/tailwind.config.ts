@@ -59,15 +59,15 @@ const config = {
           foreground: "var(--theme-black)",
         },
 
-        "theme-brown": {
-          DEFAULT: "var(--theme-brown)",
-        },
         "theme-shadeblu": {
-          DEFAULT: "var(--theme-shadblu)",
+          DEFAULT: "var(--theme-shadeblu)",
           foreground: "var(--theme-black)",
         },
         "theme-orange": {
           DEFAULT: "var(--theme-orange)",
+        },
+        "fade-text": {
+          DEFAULT: "var(--fade-text)",
         },
       },
       borderRadius: {

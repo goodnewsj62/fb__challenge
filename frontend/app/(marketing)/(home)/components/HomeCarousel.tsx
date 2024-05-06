@@ -9,6 +9,7 @@ import "./styles/swiper.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import WelcomeSlide from "./WecomeSlide";
 
 type props = { label?: string };
 
@@ -16,13 +17,19 @@ const HomeCarousel: React.FC<props> = ({
   label = "product carousel or slider",
 }) => {
   return (
-    <section aria-label={label} className="h-[300px]">
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+    <section aria-label={label} className="h-[400px]">
+      <Swiper
+        pagination={true}
+        modules={[Pagination]}
+        className="mySwiper rounded-xl"
+      >
         {[
-          <SwiperSlide key={1}>A</SwiperSlide>,
-          <SwiperSlide key={2}>B</SwiperSlide>,
-          <SwiperSlide key={3}>C</SwiperSlide>,
-          <SwiperSlide key={4}>D</SwiperSlide>,
+          <SwiperSlide key={1}>
+            <WelcomeSlide />
+          </SwiperSlide>,
+          // <SwiperSlide key={2}>B</SwiperSlide>,
+          // <SwiperSlide key={3}>C</SwiperSlide>,
+          // <SwiperSlide key={4}>D</SwiperSlide>,
         ]}
       </Swiper>
     </section>
