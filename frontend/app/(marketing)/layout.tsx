@@ -24,12 +24,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn("min-h-screen font-sans antialiased", rubik.variable)}
+        className={`${cn(
+          "min-h-screen font-sans antialiased",
+          rubik.variable
+        )} grid grid-cols-12 gap-0 auto-rows-max`}
       >
         <Header />
         <TopNav />
         <SideBar />
-        <main className="lg:container lg:mx-auto">
+        <main className="col-span-12 lg:container lg:px-0 lg:mx-auto  auto-rows-auto">
           <CenterLgScreen>{children}</CenterLgScreen>
         </main>
         <Footer />

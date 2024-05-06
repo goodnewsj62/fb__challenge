@@ -2,7 +2,7 @@ import CenterLgScreen from "./CenterLgScreen";
 
 const TopNav = () => {
   return (
-    <CenterLgScreen className="hidden  py-4 lg:block">
+    <CenterLgScreen className="bg-white col-span-12 h-fit hidden py-4 lg:block">
       <nav>
         <ul className="gap-6 flex  xl:gap-10">
           <li>Toys</li>
