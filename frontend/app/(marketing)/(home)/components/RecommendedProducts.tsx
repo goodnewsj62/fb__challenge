@@ -12,14 +12,13 @@ import ProductCard from "@/app/common/ProductCard";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Navigation } from "swiper/modules";
 import "./styles/swiper.css";
-type props = {};
+type props = {
+  key_?: string;
+};
 
-const data: string[] | undefined = undefined;
-
-const RecommendedProducts: React.FC<props> = () => {
+const RecommendedProducts: React.FC<props> = ({ key_ = "" }) => {
   const [reachedEnd, setReachedEnd] = useState(false);
   const [reachedBeginning, setReachedBeginning] = useState(true);
-  const rand = Math.round(Math.random() * 10).toString();
 
   const cards = useMemo(() => {
     return Array.from(new Array(10)).map((item, index) => {
@@ -37,8 +36,8 @@ const RecommendedProducts: React.FC<props> = () => {
         spaceBetween={15}
         // navigation={true}
         navigation={{
-          nextEl: `.move-next${rand}`,
-          prevEl: `.move-prev${rand}`,
+          nextEl: `.next-class-${key_}`,
+          prevEl: `.prev-class-${key_}`,
         }}
         slidesPerView={"auto"}
         modules={[Navigation]}
@@ -55,7 +54,7 @@ const RecommendedProducts: React.FC<props> = () => {
       </Swiper>
       <button
         onClick={() => setReachedEnd(false)}
-        className={`move-prev${rand} hidden z-[100] absolute top-1/2 -translate-y-1/2 w-[44px] -left-5 shadow-2xl h-[44px] bg-[#ced4da] rounded-full items-center justify-center md:flex ${
+        className={`prev-class-${key_} hidden z-[100] absolute top-1/2 -translate-y-1/2 w-[44px] -left-5 shadow-2xl h-[44px] bg-[#ced4da] rounded-full items-center justify-center md:flex ${
           reachedBeginning && "md:hidden"
         } `}
       >
@@ -65,7 +64,7 @@ const RecommendedProducts: React.FC<props> = () => {
         onClick={() => {
           setReachedBeginning(false);
         }}
-        className={`move-next${rand} hidden z-[100] absolute top-1/2 -translate-y-1/2 w-[44px] -right-5 shadow-2xl h-[44px] bg-[#ced4da] rounded-full items-center justify-center md:flex ${
+        className={`next-class-${key_} hidden z-[100] absolute top-1/2 -translate-y-1/2 w-[44px] -right-5 shadow-2xl h-[44px] bg-[#ced4da] rounded-full items-center justify-center md:flex ${
           reachedEnd && "md:hidden"
         } `}
       >

@@ -1,3 +1,4 @@
+"use client";
 import CategorySection from "./components/CategorySection";
 import HomeCarousel from "./components/HomeCarousel";
 import NamedField from "./components/NamedField";
@@ -9,7 +10,7 @@ export default function Home() {
       <HomeCarousel />
       <CategorySection />
       <NamedField label="recommended">
-        <RecommendedProducts />
+        <RecommendedProducts key_="a" />
       </NamedField>
       <NamedField label="hot deals">
         <RecommendedProducts />

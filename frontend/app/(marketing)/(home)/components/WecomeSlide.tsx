@@ -1,6 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import dog from "@/public/images/Christian-Vieler_funny-dogs-catching-food_01-removebg.png";
+import friskey from "@/public/images/friskeys-removebg-preview.png";
+import pedigree from "@/public/images/pedigree.png";
 import Image from "next/image";
 
 const WelcomeSlide: React.FC = () => {
@@ -26,7 +29,7 @@ const WelcomeSlide: React.FC = () => {
             bottom: "-20%",
             // left: "-30px",
           }}
-          src={"/images/pedigree.png"}
+          src={pedigree}
           alt=""
         />
         <Image
@@ -38,7 +41,7 @@ const WelcomeSlide: React.FC = () => {
             bottom: "-25%",
             left: "100px",
           }}
-          src={"/images/friskeys-removebg-preview.png"}
+          src={friskey}
           alt=""
         />
       </div>
@@ -50,9 +53,7 @@ const WelcomeSlide: React.FC = () => {
           right: 0,
           bottom: "-5%",
         }}
-        src={
-          "/images/Christian-Vieler_funny-dogs-catching-food_01-removebg.png"
-        }
+        src={dog}
         alt=""
       />
     </div>

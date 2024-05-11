@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header className="col-span-11 text-primary h-[72px] sticky top-0 left-0 border-b bg-white z-[1000]">
+    <header className="col-span-12 text-primary h-[72px] sticky top-0 left-0 border-b bg-white z-[1000]">
       <CenterLgScreen className="w-full h-full gap-4 flex items-center">
         <button className="bg-transparent" aria-label="show navbar">
           <FaBars size={22} />

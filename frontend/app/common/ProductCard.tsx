@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/helpers";
+import image1 from "@/public/images/test-bunny.jpg";
+import image2 from "@/public/images/test-cat.jpg";
+import image3 from "@/public/images/test-dog.jpg";
 import Image from "next/image";
 import { FaRegHeart, FaStar } from "react-icons/fa6";
 import { IoMdAlarm } from "react-icons/io";
@@ -14,16 +17,13 @@ const ProductCard = () => {
         </div>
         <div className="w-full h-full rounded-t-xl bg-theme-shadeblu overflow-hidden relative">
           <Image
-            fill
-            objectFit="cover"
             alt={`product`}
-            src={
-              [
-                "/images/test-bunny.jpg",
-                "/images/test-cat.jpg",
-                "/images/test-dog.jpg",
-              ][randomVal]
-            }
+            fill
+            sizes="100vw"
+            src={[image1, image2, image3][randomVal]}
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
       </div>
