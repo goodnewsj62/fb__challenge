@@ -1,3 +1,4 @@
+import logo from "@/public/images/icon-dark.png";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa6";
 import CenterLgScreen from "./CenterLgScreen";
@@ -12,12 +13,7 @@ const Header = () => {
           <FaBars size={22} />
         </button>
         <div className="ml-4 flex gap-2 items-center">
-          <Image
-            width={40}
-            height={40}
-            src={"/images/icon-dark.png"}
-            alt="logo"
-          />
+          <Image width={40} height={40} src={logo} alt="logo" />
           <h2 className="font-bold text-xl">Petxirra</h2>
         </div>
 
